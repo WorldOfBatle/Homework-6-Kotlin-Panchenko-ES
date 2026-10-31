@@ -7,4 +7,8 @@
     <string name="book_rating_hint">Рейтинг</string>
     <string name="book_rating_helper">Число от 0 до 5, например 4.8</string>
     <string name="show_book_card">Показать карточку</string>
+    <string name="error_book_title">Введите название книги</string>
+    <string name="error_book_author">Введите автора</string>
+    <string name="error_book_rating">Введите число от 0 до 5</string>
+    <string name="book_card_result">Название: %1$s\nАвтор: %2$s\nРейтинг: %3$s из 5</string>
 </resources>
