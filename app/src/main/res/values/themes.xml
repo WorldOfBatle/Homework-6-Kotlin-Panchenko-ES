@@ -1,9 +1,18 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Homework6KotlinPanchenkoES" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<resources>
+
+    <style name="Base.Theme.Homework6KotlinPanchenkoES"
+        parent="Theme.Material3.DayNight.NoActionBar" />
+
+    <style name="Theme.Homework6KotlinPanchenkoES"
+        parent="Base.Theme.Homework6KotlinPanchenkoES" />
+
+    <style name="Theme.Homework6KotlinPanchenkoES.Starting"
+        parent="Theme.SplashScreen">
+
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.Homework6KotlinPanchenkoES</item>
+
     </style>
 
-    <style name="Theme.Homework6KotlinPanchenkoES" parent="Base.Theme.Homework6KotlinPanchenkoES" />
 </resources>
