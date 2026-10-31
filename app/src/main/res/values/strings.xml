@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Homework-6-Kotlin-Panchenko-ES</string>
+    <string name="app_name">Карточка книги</string>
     <string name="book_form_title">Карточка книги</string>
     <string name="book_form_description">Введите информацию о книге и оцените её от 0 до 5.</string>
     <string name="book_title_hint">Название книги</string>
