@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Homework-6-Kotlin-Panchenko-ES</string>
+    <string name="book_form_title">Карточка книги</string>
 </resources>
