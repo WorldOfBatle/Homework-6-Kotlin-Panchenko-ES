@@ -67,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_large"
-            android:text="@string/save_login" />
+            android:text="@string/start_quiz" />
 
     </LinearLayout>
 

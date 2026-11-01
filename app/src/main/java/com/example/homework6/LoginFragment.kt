@@ -6,9 +6,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.homework6.databinding.FragmentLoginBinding
+import androidx.navigation.fragment.findNavController
 
 class LoginFragment : Fragment() {
 
@@ -79,11 +79,9 @@ class LoginFragment : Fragment() {
             .putString("password", password)
             .apply()
 
-        Toast.makeText(
-            requireContext(),
-            R.string.login_saved,
-            Toast.LENGTH_SHORT
-        ).show()
+        findNavController().navigate(
+            R.id.action_loginFragment_to_quizFragment
+        )
     }
 
     override fun onDestroyView() {

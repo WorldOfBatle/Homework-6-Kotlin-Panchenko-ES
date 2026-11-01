@@ -25,4 +25,18 @@
     <string name="error_login">Введите логин</string>
     <string name="error_password">Введите пароль</string>
     <string name="login_saved">Данные сохранены</string>
+    <string name="start_quiz">Начать тест</string>
+    <string name="quiz_title">Литературный тест</string>
+    <string name="quiz_loading">Загрузка вопросов…</string>
+    <string name="quiz_progress">Вопрос %1$d из %2$d</string>
+    <string name="quiz_choose_answer">Выберите один вариант ответа.</string>
+    <string name="quiz_empty">В базе пока нет вопросов.</string>
+    <string name="quiz_load_error">Не удалось загрузить вопросы. Вернитесь назад и попробуйте снова.</string>
+    <string name="quiz_next">Далее</string>
+    <string name="quiz_finish">Завершить тест</string>
+    <string name="quiz_answer_required">Сначала выберите ответ.</string>
+    <string name="quiz_result_title">Результат теста</string>
+    <string name="quiz_result_score">Правильных ответов: %1$d из %2$d</string>
+    <string name="quiz_repeat">Пройти ещё раз</string>
+    <string name="quiz_return_login">Вернуться ко входу</string>
 </resources>

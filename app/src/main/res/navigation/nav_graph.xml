@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
     app:startDestination="@id/loginFragment">
@@ -7,6 +8,46 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.homework6.LoginFragment"
-        android:label="@string/login_title" />
+        android:label="@string/login_title">
+
+        <action
+            android:id="@+id/action_loginFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.homework6.QuizFragment"
+        android:label="@string/quiz_title">
+
+        <action
+            android:id="@+id/action_quizFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/quizFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.homework6.ResultFragment"
+        android:label="@string/quiz_result_title">
+
+        <argument
+            android:name="score"
+            app:argType="integer" />
+
+        <argument
+            android:name="total"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_resultFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
+            app:popUpTo="@id/resultFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
 
 </navigation>
