@@ -2,21 +2,11 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/bookFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
-        android:id="@+id/bookFragment"
-        android:name="com.example.homework6.BookFragment"
-        android:label="@string/book_form_title" />
-
-    <fragment
-        android:id="@+id/helpFragment"
-        android:name="com.example.homework6.HelpFragment"
-        android:label="@string/help_title" />
-
-    <fragment
-        android:id="@+id/aboutFragment"
-        android:name="com.example.homework6.AboutFragment"
-        android:label="@string/about_title" />
+        android:id="@+id/loginFragment"
+        android:name="com.example.homework6.LoginFragment"
+        android:label="@string/login_title" />
 
 </navigation>
