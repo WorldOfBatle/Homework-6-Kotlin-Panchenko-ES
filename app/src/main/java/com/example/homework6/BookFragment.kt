@@ -12,6 +12,13 @@ class BookFragment : Fragment() {
     private var _binding: FragmentBookBinding? = null
     private val binding get() = _binding!!
 
+    private var bookCardText: String? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        bookCardText = savedInstanceState?.getString(KEY_BOOK_CARD)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,19 +36,25 @@ class BookFragment : Fragment() {
         }
     }
 
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+        super.onViewStateRestored(savedInstanceState)
+        displayBookCard()
+    }
+
     private fun showBookCard() {
         val title = binding.bookTitleEditText.text.toString().trim()
         val author = binding.bookAuthorEditText.text.toString().trim()
         val ratingText = binding.bookRatingEditText.text.toString()
             .trim()
             .replace(',', '.')
-
         val rating = ratingText.toDoubleOrNull()
 
         binding.bookTitleLayout.error = null
         binding.bookAuthorLayout.error = null
         binding.bookRatingLayout.error = null
-        binding.bookResultTextView.visibility = View.GONE
+
+        bookCardText = null
+        displayBookCard()
 
         var hasErrors = false
 
@@ -64,17 +77,33 @@ class BookFragment : Fragment() {
             return
         }
 
-        binding.bookResultTextView.text = getString(
+        bookCardText = getString(
             R.string.book_card_result,
             title,
             author,
             rating.toString()
         )
-        binding.bookResultTextView.visibility = View.VISIBLE
+
+        displayBookCard()
+    }
+
+    private fun displayBookCard() {
+        binding.bookResultTextView.text = bookCardText.orEmpty()
+        binding.bookResultTextView.visibility =
+            if (bookCardText != null) View.VISIBLE else View.GONE
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(KEY_BOOK_CARD, bookCardText)
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    companion object {
+        private const val KEY_BOOK_CARD = "book_card"
     }
 }
