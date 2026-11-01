@@ -11,4 +11,9 @@
     <string name="error_book_author">Введите автора</string>
     <string name="error_book_rating">Введите число от 0 до 5</string>
     <string name="book_card_result">Название: %1$s\nАвтор: %2$s\nРейтинг: %3$s из 5</string>
+    <string name="help_title">Помощь</string>
+    <string name="help_description">Как заполнить карточку книги:\n\n1. Введите название книги.\n\n2. Укажите автора.\n\n3. Введите рейтинг от 0 до 5. Дробную часть можно отделить точкой или запятой.\n\n4. Нажмите «Показать карточку».\n\nЕсли данные заполнены неправильно, под соответствующим полем появится подсказка.</string>
+    <string name="about_title">О приложении</string>
+    <string name="about_description">«Карточка книги» позволяет ввести название книги, автора и рейтинг, а затем посмотреть заполненную карточку.</string>
+    <string name="about_author">Автор: Панченко Евгений</string>
 </resources>
